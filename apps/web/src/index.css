@@ -1,0 +1,13 @@
+@import "tw-animate-css";
+@import "tailwindcss";
+
+@tailwind utilities;
+
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #86586e;
+
+  --nome-cor: #fff;
+}
