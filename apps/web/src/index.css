@@ -1,13 +1,15 @@
-@import "tw-animate-css";
-@import "tailwindcss";
+@import 'tw-animate-css';
+@import 'tailwindcss';
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
 @tailwind utilities;
 
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'VT323', monospace;
 
-  color: #2e3123;
-  background-color: #86586e;
+  --nome-cor: #000000;
+}
 
-  --nome-cor: #fff;
+@theme {
+  --shadow-window: -11px 16px rgba(34, 18, 8, 1);
 }
