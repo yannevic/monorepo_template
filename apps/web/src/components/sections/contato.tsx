@@ -23,7 +23,7 @@ function ContactSection() {
 
   const som = () => {
     const audio = new Audio(sound);
-    audio.volume = 0.2;
+    audio.volume = 0.4;
     audio.play();
   };
 
@@ -60,7 +60,29 @@ function ContactSection() {
         variant="blue"
       >
         <div className="w-full  p-[25px] flex items-center justify-center">
-          <form className="w-[650px] mx-auto flex flex-col gap-6">
+          <form
+            className="w-[650px] mx-auto flex flex-col gap-6"
+            onSubmit={(e) => {
+              e.preventDefault();
+
+              const nome = nomeRef.current?.value.trim();
+              const assunto = assuntoRef.current?.value.trim();
+              const email = emailRef.current?.value.trim();
+              const texto = textoRef.current?.value.trim();
+
+              if (nome && assunto && email && texto) {
+                som();
+                handleOpenModal();
+
+                nomeRef.current!.value = '';
+                assuntoRef.current!.value = '';
+                emailRef.current!.value = '';
+                textoRef.current!.value = '';
+              } else {
+                alert('Por favor, preencha todos os campos obrigatórios.');
+              }
+            }}
+          >
             <CustomInput
               ref={nomeRef}
               label="Nome"
@@ -99,11 +121,7 @@ function ContactSection() {
 
             <div className="flex justify-center">
               <Button
-                type="button"
-                onClick={() => {
-                  som();
-                  handleOpenModal();
-                }}
+                type="submit"
                 asChild={false}
                 className="flex items-center justify-center w-[180px] h-[55px] bg-[#82AADE] text-[32px] p-[5px] hover:cursor-pointer hover:scale-[1.03] border-[2px] transition duration-300 ease-in-out"
               >
@@ -114,7 +132,15 @@ function ContactSection() {
         </div>
       </Window>
       {sendMessage && (
-        <div className="fixed inset-0 flex items-center justify-center z-50">
+        <div
+          className="fixed inset-0 flex items-center justify-center z-50"
+          onClick={handleCloseModal}
+          onKeyDown={(e) => {
+            if (e.key === 'Enter' || e.key === 'Escape') handleCloseModal();
+          }}
+          tabIndex={0}
+          role="button"
+        >
           <Window windowTitle="Atenção" showButtons closeButton={handleCloseModal}>
             <div className="flex flex-col items-center justify-center w-[320px] ">
               <div className="w-full py-[24px] text-[24px]">

@@ -110,7 +110,7 @@ function HeroSection() {
         </div>
       </Window>
       {openCurriculum && (
-        <div className="fixed flex items-center justify-center z-50 animate-slideUp">
+        <div className="fixed flex items-center justify-center z-50 animate-slideUp ">
           <Window windowTitle="Atenção" showButtons closeButton={handleCloseModal}>
             <div className="flex flex-col items-center justify-center w-[320px] ">
               <div className="w-full py-[24px] text-[24px]">
