@@ -52,7 +52,7 @@ function ContactSection() {
   }, [sendMessage]);
 
   return (
-    <div style={bgStyle} className={aboutWrapperStyles}>
+    <div id="contato" style={bgStyle} className={aboutWrapperStyles}>
       <Window
         className="mt-[12px] w-[700px] h-[620px]"
         windowTitle="Contato "

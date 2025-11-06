@@ -69,7 +69,7 @@ function HeroSection() {
   }, [openCurriculum]);
 
   return (
-    <div style={bgStyle} className={heroWrapperStyles}>
+    <div id="inicio" style={bgStyle} className={heroWrapperStyles}>
       <Window className="border-none -mt-[4px] " isBaloonChat>
         <div className="w-[664px] px-[50px] pt-[40px] pb-[60px] flex flex-col gap-[45px] ">
           <div className="  text-[#221208]">

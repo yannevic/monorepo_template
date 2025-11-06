@@ -117,7 +117,7 @@ function StudiesSection() {
   );
 
   return (
-    <div style={bgStyle} className={aboutWrapperStyles}>
+    <div id="estudos" style={bgStyle} className={aboutWrapperStyles}>
       <Window className="mt-[12px]" windowTitle="Nana">
         <div className="w-full h-full p-[25px] flex items-center justify-center ">
           <img src={studiesNana} alt="" />

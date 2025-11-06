@@ -53,7 +53,7 @@ function MyProjectsSection() {
   }, [selectedProject]);
 
   return (
-    <div style={bgStyle} className={aboutWrapperStyles}>
+    <div id="projetos" style={bgStyle} className={aboutWrapperStyles}>
       <Window className="mt-[12px]" windowTitle="Meus Projetos">
         <div className="grid grid-cols-5 gap-[18px] w-[664px] p-[70px] ">
           {projects.map((project) => (

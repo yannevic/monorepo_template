@@ -1,11 +1,13 @@
 import Star from '@/components/ui/sparkle/index';
 import TimerWindow from './components/ui/timer';
+import NavBar from './components/sections/navbar';
 import HeroSection from './components/sections/hero';
 import StudiesSection from './components/sections/estudos';
 import MyProjectsSection from './components/sections/projetos';
 import AboutMeSection from './components/sections/sobre';
 import ContactSection from './components/sections/contato';
 import FooterSection from './components/sections/footer';
+import ScrollPage from './utils/ScrollPage';
 
 function App() {
   const stars = [
@@ -22,6 +24,7 @@ function App() {
 
   return (
     <div className="relative">
+      <NavBar scrollProgress={ScrollPage()} />
       <HeroSection />
       <StudiesSection />
       <MyProjectsSection />
