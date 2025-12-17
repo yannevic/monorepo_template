@@ -35,3 +35,7 @@ Caso já exista:
 ```
 git remote set-url origin url_do_projeto
 ```
+
+(crie um repositorio no GitHub para pegar o link)
+
+Dps da um git push origin main
