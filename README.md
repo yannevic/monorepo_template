@@ -1,6 +1,12 @@
-# Monorepo Template
+# Minesweeper Coop
 
-Este é meu template de um projeto **Monorepo**
+Este é meu projeto de **Minesweeper Coop** feito por mim com auxilio de IA.
+
+##Informações adicionais
+
+O jogo consiste em um campo minado que pode ser jogado por 2 player na mesma máquina (por enquanto!), baseado em pontuação para decidir o vencedor.
+
+Regras baseadas no jogo **Campo minado**.
 
 # Instalação
 
@@ -18,24 +24,4 @@ npm install
 npm run dev
 ```
 
-## Para subir o projeto a primeira vez, verificar se existe origem de repositório.
-
-```
-git remote -v
-```
-
-Caso não exista nenhuma origin:
-
-```
-git remote add origin url_do_projeto
-```
-
-Caso já exista:
-
-```
-git remote set-url origin url_do_projeto
-```
-
-(crie um repositorio no GitHub para pegar o link)
-
-Dps da um git push origin main
+Have fun!
